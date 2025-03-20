@@ -40,7 +40,7 @@ func (a *MaybeStringArray) UnmarshalYAML(value *yaml.Node) error {
 func (a MaybeStringArray) MarshalYAML() (interface{}, error) {
 	switch len(a) {
 	case 0:
-		return "", nil
+		return nil, nil
 	case 1:
 		return a[0], nil
 	default:
@@ -66,7 +66,7 @@ func (a *MaybeStringArray) UnmarshalJSON(data []byte) error {
 func (a MaybeStringArray) MarshalJSON() ([]byte, error) {
 	switch len(a) {
 	case 0:
-		return json.Marshal("")
+		return json.Marshal(nil)
 	case 1:
 		return json.Marshal(a[0])
 	default:
