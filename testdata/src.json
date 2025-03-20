@@ -1,0 +1,8 @@
+{
+  "field1": "",
+  "field2": "single item",
+  "field3": [
+    "multiple",
+    "items"
+  ]
+}
